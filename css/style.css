@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primaryTextColor: #00d9ff; /* Untuk title atau judul */
+  --secondaryTextColor: #233d4d; /* Untuk text biasa seperti paragraph contohnya */
+
+  --borderColor: #999999;
+  --lineColor: #d9d9d9; /* untuk line di pre-title */
+
+  --primaryBackgroundColor: #ffffff;
+  --secondaryBackgroundColor: #fbfbfb;
+  --thirdBackgroundColor: #f5f3fe;
+
+  --primaryIconColor: #7e74f1;
+  --primaryIconColorHover: #5d51e8;
+
+  --sectionPadding: 6rem 0;
+
+  --itemBorderRadius: 0.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppins";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextColor);
+}
+
+p {
+  font-size: 1rem; /* 1rem=16px */
+  line-height: 1.9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: var(--secondaryTextColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* end preparation */
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+/* button */
+
+.btn {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid var(--borderColor);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 4px 3px 5px;
+}
+
+/* Titles */
+
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.section-title {
+  margin: 1em 0 4em;
+  font-size: 2em;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  color: var(--secondaryTextColor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 5px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 40%;
+}
+
+.pre-title span {
+  color: var(--primaryIconColor) !important;
+}
+
+/* layout */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  
+}
+
+.grid-3 :hover{
+  border: 5px solid black;
+  transition: .3s ease-in-out;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3em;
+  border: 2px solid var(--borderColor);
+}
+
+/* Logo dan Navbar menu */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  font-weight: bold;
+  top: auto;
+}
+
+/* logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: var(--primaryTextColor);
+}
+
+.logo img {
+  display: flex;
+  align-items: center;
+  width: 59px;
+  height: 50px;
+  border: 2px solid #233d4d;
+  background-color: #00d9ff;
+  right: 300%;
+}
+
+/* Nav menu */
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  right: 100px;
+}
+
+nav ul li a {
+  color: var(--primaryTextColor);
+}
+
+/* Burger */
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+/* Hero Section */
+
+#hero {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0.5em 0 1em;
+}
+
+.hero-name span {
+  color: var(--primaryIconColor) !important;
+}
+
+.hero-right img {
+  height: 100%;
+  width: 90%;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* service section */
+#services {
+  background-color: var(--secondaryBackgroundColor);
+}
+
+.services .pre-title {
+  margin: auto;
+}
+
+.services-title {
+  text-align: center;
+}
+
+.service {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: var(--primaryBackgroundColor);
+  border-radius: var(--itemBorderRadius);
+}
+
+.service :hover{
+  border: 5px solid black;
+  border-radius: var(--itemBorderRadius);
+  transition: .4s ease-in-out;
+}
+
+.service h4 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.service-icon {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.service-icon svg {
+  fill: var(--primaryIconColor);
+}
+
+/* portfolio Section */
+
+#portfolio {
+  padding: var(--sectionPadding);
+}
+
+.portfolios {
+  border-radius: var(--itemBorderRadius);
+  overflow: hidden;
+  border: 1px solid var(--borderColor);
+  background-color: var(--primaryBackgroundColor);
+}
+
+.portfolios-cover {
+  height: 250px;
+}
+
+.portfolios-cover img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 2rem 1.5rem;
+}
+
+.portfolio-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portfolio h4 {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.portfolio-title a svg :hover {
+  fill: var(--primaryIconColorHover);
+}
+
+.portfolio-title svg {
+  transition: 0.2s ease-in-out;
+}
+
+.portfolio-tags {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.portfolio-tags div {
+  font-size: 0.9rem;
+  border: 1px solid var(--borderColor);
+  padding: 0.4rem 1rem;
+  color: var(--secondaryTextColor);
+}
+
+.portfolio-tags div :hover {
+  border: 2px solid black;
+}
+
+/* skills and education */
+
+#skills {
+  padding: var(--sectionPadding);
+  background: var(--secondaryBackgroundColor);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.education {
+  display: flex;
+  gap: 2rem;
+}
+
+.education .line {
+  padding: 0 0.7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 100%;
+  background: var(--borderColor);
+  position: relative;
+}
+
+.education-info p {
+  margin: 0.6rem 0 1.4rem;
+}
+
+.education-years {
+  margin-bottom: 3rem;
+}
+
+/* dots on line */
+
+.education .line div::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--borderColor);
+  position: absolute;
+  left: -6px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+}
+
+.skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+
+/* contact section */
+
+#contact {
+  padding: var(--sectionPadding);
+}
+
+.contact {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+  gap: 3rem;
+}
+
+.contact-from div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-from input,
+.contact-from textarea {
+  width: 100%;
+
+  padding: 0.75rem 1.3rem;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  background: var(--secondaryBackgroundColor);
+
+  border: 1px solid var(--borderColor);
+
+  border-radius: 3px;
+
+  resize: none;
+}
+
+.contact-from input::placeholder,
+.contact-from textarea::placeholder {
+  color: #743fdd;
+}
+
+.contact-from input:focus,
+.contact-from textarea:focus {
+  outline: none;
+
+  border: 6px solid #7d7d7d;
+}
+
+.btn-submit {
+  width: 100%;
+
+  padding: 0.75rem 1.3rem;
+
+  background-color: var(--primaryIconColor);
+
+  color: #fff;
+
+  border: none;
+
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: var(--primaryIconColorHover);
+}
+
+.contact-item-icon {
+  background: var(--thirdBackgroundColor);
+
+  width: 53px;
+
+  height: 53px;
+
+  border-radius: 9px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.contact-item-icon svg {
+  fill: var(--primaryIconColor);
+}
+
+.contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+}
+
+.contact-item {
+  display: flex;
+
+  gap: 3rem;
+
+  margin-bottom: 2.5rem;
+}
+
+/* footer section */
+
+footer {
+  padding: 4rem 0;
+  background: var(--secondaryBackgroundColor);
+  text-align: center;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+  fill: #3e3f40;
+}
+
+.footer-icons a:hover svg {
+  fill: #000;
+}
