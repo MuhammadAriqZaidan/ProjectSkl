@@ -129,13 +129,12 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
-  
 }
 
-.grid-3 :hover{
+/* .grid-3 :hover{ 
   border: 5px solid black;
   transition: .3s ease-in-out;
-}
+}*/
 
 .grid {
   display: grid;
@@ -259,14 +258,16 @@ nav ul li a {
 .service {
   padding: 3rem 2rem;
   text-align: center;
-  background-color: var(--primaryBackgroundColor);
+  background-color: #ffff;
   border-radius: var(--itemBorderRadius);
+  border: 1px solid gray;
 }
 
-.service :hover{
+
+.service:hover {
   border: 5px solid black;
   border-radius: var(--itemBorderRadius);
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .service h4 {
@@ -298,6 +299,11 @@ nav ul li a {
   overflow: hidden;
   border: 1px solid var(--borderColor);
   background-color: var(--primaryBackgroundColor);
+}
+
+.portfolios:hover {
+  border: 5px solid black;
+  transition: 0.5s ease-in-out;
 }
 
 .portfolios-cover {
