@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --primaryTextColor: #00d9ff; /* Untuk title atau judul */
+  --primaryTextColor: #c0b3fc; /* Untuk title atau judul */
   --secondaryTextColor: #233d4d; /* Untuk text biasa seperti paragraph contohnya */
 
-  --borderColor: #999999;
-  --lineColor: #d9d9d9; /* untuk line di pre-title */
+  --borderColor: #22363e;
+  --lineColor: #bca2fd; /* untuk line di pre-title */
 
-  --primaryBackgroundColor: #ffffff;
-  --secondaryBackgroundColor: #fbfbfb;
-  --thirdBackgroundColor: #f5f3fe;
+  --primaryBackgroundColor: #ede9ff;
+  --secondaryBackgroundColor: #f0f2ff;
+  --thirdBackgroundColor: #ede9ff;
 
   --primaryIconColor: #7e74f1;
   --primaryIconColorHover: #5d51e8;
@@ -263,11 +263,9 @@ nav ul li a {
   border: 1px solid gray;
 }
 
-
 .service:hover {
   border: 5px solid black;
   border-radius: var(--itemBorderRadius);
-  transition: 0.4s ease-in-out;
 }
 
 .service h4 {
@@ -303,7 +301,6 @@ nav ul li a {
 
 .portfolios:hover {
   border: 5px solid black;
-  transition: 0.5s ease-in-out;
 }
 
 .portfolios-cover {
