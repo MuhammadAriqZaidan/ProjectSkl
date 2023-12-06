@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --primaryTextColor: #c0b3fc; /* Untuk title atau judul */
+  --primaryTextColor: #3a88fd; /* Untuk title atau judul */
   --secondaryTextColor: #233d4d; /* Untuk text biasa seperti paragraph contohnya */
 
   --borderColor: #22363e;
-  --lineColor: #bca2fd; /* untuk line di pre-title */
+  --lineColor: #385cff; /* untuk line di pre-title */
 
   --primaryBackgroundColor: #ede9ff;
   --secondaryBackgroundColor: #f0f2ff;
   --thirdBackgroundColor: #ede9ff;
 
-  --primaryIconColor: #7e74f1;
-  --primaryIconColorHover: #5d51e8;
+  --primaryIconColor: #5372ff;
+  --primaryIconColorHover: #0047b1;
 
   --sectionPadding: 6rem 0;
 
